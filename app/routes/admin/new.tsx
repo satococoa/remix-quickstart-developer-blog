@@ -16,6 +16,7 @@ export const action: ActionFunction = async ({ request }) => {
   const slug = formData.get("slug");
   const markdown = formData.get("markdown");
 
+  // 型を書かないと警告が出る
   const errors: Record<string, boolean> = {};
   if (!title) errors.title = true;
   if (!slug) errors.slug = true;

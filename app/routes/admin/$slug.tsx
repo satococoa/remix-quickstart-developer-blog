@@ -46,6 +46,7 @@ export default function EditPost() {
   const post = useLoaderData<RawPost>();
 
   return (
+    // key を付けないとページ遷移した際に入力値が引き継がれてしまう
     <Form method="post" key={post.slug}>
       <p>
         <label>
